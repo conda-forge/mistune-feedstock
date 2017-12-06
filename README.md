@@ -14,9 +14,7 @@ Summary: The fastest markdown parser in pure Python.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mistune-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mistune-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mistune-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mistune-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mistune-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mistune-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/mistune-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mistune-feedstock)
 
 Current release info
 ====================
