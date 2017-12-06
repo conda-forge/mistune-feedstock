@@ -1,22 +1,22 @@
-{% set name = "mistune" %}
-{% set version = "0.8" %}
+{% set version = "0.8.3" %}
 
 package:
-  name: {{ name }}
+  name: mistune
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dc3f43e7cf0abb95cdfecbf82d85c419108d5f13e1844b2a8a2fc0abf24c7a47
+  url: https://pypi.io/packages/source/m/mistune/mistune-{{ version }}.tar.gz
+  sha256: bc10c33bfdcaa4e749b779f62f60d6e12f8215c46a292d05e486b869ae306619
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
 
