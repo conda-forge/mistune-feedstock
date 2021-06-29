@@ -39,11 +39,11 @@ test:
 about:
   home: https://github.com/lepture/mistune
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
-  summary: 'The fastest markdown parser in pure Python.'
+  summary: The fastest markdown parser in pure Python.
   dev_url: https://github.com/lepture/mistune
-  doc_url: https://mistune.readthedocs.io/
+  doc_url: https://mistune.readthedocs.io
 
 extra:
   recipe-maintainers:
