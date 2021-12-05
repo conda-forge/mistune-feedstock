@@ -9,17 +9,12 @@ source:
   sha256: de718f82db8c3730f885d576237bdc819dcbb8bc1340db378c27ba88abb2d777
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
-    - {{ compiler('c') }}
   host:
-    - cython
     - python
     - pip
   run:
@@ -29,19 +24,21 @@ test:
   source_files:
     - tests
   requires:
-    - nose
+    - pytest-cov
     - python
+    - pip
   imports:
     - mistune
   commands:
-    - nosetests
+    - pip check
+    - pytest --cov mistune --cov-report=term-missing:skip-covered --cov-fail-under=98 --no-cov-on-fail
 
 about:
   home: https://github.com/lepture/mistune
   license_file: LICENSE
   license: BSD-3-Clause
   license_family: BSD
-  summary: The fastest markdown parser in pure Python.
+  summary: A sane Markdown parser with useful plugins and renderers.
   dev_url: https://github.com/lepture/mistune
   doc_url: https://mistune.readthedocs.io
 
