@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -19,6 +19,10 @@ requirements:
     - pip
   run:
     - python >=2.7
+  run_constrained:
+    # 6.1.0 pins to mistune <2 (a future version may loosen this pin)
+    # see: https://github.com/conda-forge/nbconvert-feedstock/pull/54
+    - nbconvert >6.1.0
 
 test:
   source_files:
