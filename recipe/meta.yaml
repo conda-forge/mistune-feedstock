@@ -1,4 +1,4 @@
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 
 package:
   name: mistune
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mistune/mistune-{{ version }}.tar.gz
-  sha256: d7605b46b6156b53b7d52a465202b29a6f00f4ea4130ad5d25e9d5547d6b7e50
+  sha256: 9ee0a66053e2267aba772c71e06891fa8f1af6d4b01d5e84e267b4570d4d9808
 
 build:
   noarch: python
