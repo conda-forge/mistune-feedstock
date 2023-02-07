@@ -150,4 +150,5 @@ Feedstock Maintainers
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pelson](https://github.com/pelson/)
+* [@xylar](https://github.com/xylar/)
 
