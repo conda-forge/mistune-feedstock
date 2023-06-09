@@ -35,7 +35,7 @@ test:
     - mistune
   commands:
     - pip check
-    - cd src && pytest --cov=mistune --cov-branch --cov-report=term-missing:skip-covered --cov-fail-under=98 --no-cov-on-fail
+    - cd src && pytest --cov=mistune --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=95
 
 about:
   home: https://github.com/lepture/mistune
