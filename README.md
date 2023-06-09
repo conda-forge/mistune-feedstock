@@ -1,11 +1,11 @@
-About mistune
-=============
+About mistune-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mistune-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/lepture/mistune
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mistune-feedstock/blob/main/LICENSE.txt)
 
 Summary: A sane Markdown parser with useful plugins and renderers.
 
