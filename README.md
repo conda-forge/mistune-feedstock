@@ -7,11 +7,11 @@ Home: https://github.com/lepture/mistune
 
 Package license: BSD-3-Clause
 
-Summary: A sane Markdown parser with useful plugins and renderers.
+Summary: A sane and fast Markdown parser with useful plugins and renderers
 
 Development: https://github.com/lepture/mistune
 
-Documentation: https://mistune.readthedocs.io
+Documentation: https://mistune.lepture.com
 
 Current build status
 ====================
