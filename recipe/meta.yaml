@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: mistune
@@ -7,15 +7,15 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/m/mistune/mistune-{{ version }}.tar.gz
-    sha256: b28444efe542cc9bb9f19fb133740ab020fe5e14fe6ffcce9576d24fbd1e5b20
+    sha256: e912116c13aa0944f9dc530db38eb88f6a77087ab128f49f84a48f4c05ea163c
   - folder: src
     url: https://github.com/lepture/mistune/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 0df4cd4ce95325a62a91972831cd56cf05ad1ed63b42c1514de28962a9a67eab
+    sha256: fc5462974ebd9d121ddb19937c45f32bd0688c83cdccf28e7f0485cbe07406c6
 
 build:
   noarch: python
   number: 0
-  script: cd dist && {{ PYTHON }} -m pip install . --no-deps -vv
+  script: cd dist && {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   host:
@@ -31,10 +31,12 @@ test:
   requires:
     - pytest-cov
     - pip
+    - mypy
   imports:
     - mistune
   commands:
     - pip check
+    - mypy -p mistune
     - cd src && pytest --cov=mistune --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=95
 
 about:
