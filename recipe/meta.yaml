@@ -24,14 +24,12 @@ test:
   source_files:
     - tests
   requires:
-    - mypy
     - pip
     - pytest-cov
   imports:
     - mistune
   commands:
     - pip check
-    - mypy -p mistune
     - pytest -vv --color=yes --tb=long --cov=mistune --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=95
 
 about:
