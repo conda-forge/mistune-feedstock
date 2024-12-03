@@ -5,20 +5,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/mistune/mistune-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/mistune/mistune-{{ version }}.tar.gz
   sha256: fc7f93ded930c92394ef2cb6f04a8aabab4117a91449e72dcc8dfa646a508be8
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -26,6 +26,7 @@ test:
   requires:
     - pip
     - pytest-cov
+    - python {{ python_min }}
   imports:
     - mistune
   commands:
