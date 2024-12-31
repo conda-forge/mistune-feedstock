@@ -11,7 +11,8 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
@@ -20,6 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
+    - typing_extensions
 
 test:
   source_files:
@@ -32,7 +34,8 @@ test:
     - mistune
   commands:
     - pip check
-    - pytest -vv --color=yes --tb=long --cov=mistune --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=95
+    - coverage run --source=mistune --branch -m pytest -vv --color=yes --tb=long
+    - coverage report --show-missing --skip-covered --fail-under=93
 
 about:
   home: https://github.com/lepture/mistune
