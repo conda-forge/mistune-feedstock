@@ -11,7 +11,7 @@ Summary: A sane and fast Markdown parser with useful plugins and renderers
 
 Development: https://github.com/lepture/mistune
 
-Documentation: https://mistune.lepture.com
+Documentation: https://mistune.lepture.com/
 
 Current build status
 ====================
