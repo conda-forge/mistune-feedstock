@@ -1,7 +1,8 @@
 schema_version: 1
 
 context:
-  version: "3.1.4"
+  version: "3.2.0"
+  python_check_max: "3.14"
 
 package:
   name: mistune
@@ -9,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistune/mistune-${{ version }}.tar.gz
-  sha256: b5a7f801d389f724ec702840c11d8fc48f2b33519102fc7ee739e8177b672164
+  sha256: 708487c8a8cdd99c9d90eb3ed4c3ed961246ff78ac82f03418f5183ab70e398a
 
 build:
   number: 0
@@ -32,7 +33,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
   - files:
       source:
         - tests/
