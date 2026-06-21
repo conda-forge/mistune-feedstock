@@ -17,6 +17,9 @@ build:
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - mistune = mistune.__main__:cli
 
 requirements:
   host:
@@ -36,6 +39,7 @@ tests:
         - ${{ python_check_max }}.*
   - files:
       source:
+        - pyproject.toml
         - tests/
     requirements:
       run:
