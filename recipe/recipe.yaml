@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.3.2"
+  version: "3.3.3"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mistune/mistune-${{ version }}.tar.gz
-  sha256: e12ee4f1e74336e91aa1141e35f913b337c40bdf7c0cc49f21fb853a27e8b62f
+  sha256: c4c6c0c840b8637a2e9b8b6d607eb7c8f00888bf14c754409bcd339e848c2477
 
 build:
   number: 0
