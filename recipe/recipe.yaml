@@ -48,7 +48,7 @@ tests:
         - python ${{ python_min }}.*
     script:
       - mistune --help
-      - mistune --version | ${{ "grep -iE" if unix else "findstr" }} "${{ version | replace('.', '\\.')}}"
+      - mistune --version | ${{ "grep -iE" if unix else "findstr" }} "${{ version | replace('.', '\\.') }}"
       - coverage run --source=mistune --branch -m pytest -vv --color=yes --tb=long
       - coverage report --show-missing --skip-covered --fail-under=93
 
