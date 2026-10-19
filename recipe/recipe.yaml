@@ -24,12 +24,11 @@ build:
 
 requirements:
   host:
-    - pip
     - python ${{ python_min }}.*
+    - pip
     - setuptools
   run:
     - python >=${{ python_min }}
-    - typing_extensions
 
 tests:
   - python:
@@ -38,6 +37,7 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
+        - "*"
   - files:
       source:
         - pyproject.toml
